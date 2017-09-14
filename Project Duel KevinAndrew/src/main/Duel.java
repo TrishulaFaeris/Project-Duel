@@ -1,9 +1,9 @@
-package duel;
+package main;
 
-import duel.CharacterA;
-import duel.CharacterB;
-import duel.Duel;
-import duel.Dueler;
+import main.CharacterA;
+import main.CharacterB;
+import main.Duel;
+import main.Dueler;
 
 public class Duel {
 
