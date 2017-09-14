@@ -1,5 +1,5 @@
 package main;
 
-public class CharacterA {
+public class CharacterA implements Dueler{
 
 }
