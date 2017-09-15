@@ -20,13 +20,22 @@ public class CharacterB implements Dueler {
 	public int getHp() {
 		return hp;
 	}
-	public void setStartingHP(int hp) {
-
-	}
-	public int getHP() {
-
-	}
 	public boolean determineIfOpponentIsFair(Dueler d, int hp) {
+		if(d.getHP() == hp) {
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		
+	}
+	public int getAction(Object caller) {
 
+	}
+	@Override
+	public void hit(Object caller) {
+		// TODO Auto-generated method stub
+		
 	}
 }
