@@ -14,10 +14,10 @@ public class CharacterB implements Dueler {
 	{
 		System.out.println("We don't need ya here, get the fudge inside!");
 	}
-	public void setStartingHp(int hp) {
+	public void setStartingHP(int hp) {
 		this.hp = hp;
 	}
-	public int getHp() {
+	public int getHP() {
 		return hp;
 	}
 	public boolean determineIfOpponentIsFair(Dueler d, int hp) {
@@ -31,11 +31,31 @@ public class CharacterB implements Dueler {
 		
 	}
 	public int getAction(Object caller) {
-
+		boolean d2Loaded = false;
+		if(Math.random() <0.25){
+			return 3;
+		}
+		else {
+			if(Math.random()<0.75) {
+				return 2;
+			}
+			else {
+				if(d2Loaded == false) {
+					d2Loaded = true;
+					return 0;
+				}
+				else {
+					d2Loaded = false;
+					return 1;
+				}
+			}
+			
+		}
 	}
-	@Override
 	public void hit(Object caller) {
-		// TODO Auto-generated method stub
-		
+		if(caller instanceof Duel) {
+		 this.hp = this.hp - 10;
+		}
 	}
 }
+
