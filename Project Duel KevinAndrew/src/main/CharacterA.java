@@ -3,10 +3,13 @@ package main;
 public class CharacterA implements Dueler{
 	private int hp;
 	private boolean loaded;
+	private int tauntIndex = 0;
+	private String[] taunts = {"Pew pew pew", "Vrooooom"};
 	public CharacterA() {
 	}
 	public void taunt() {
-		System.out.println("Pew pew pew");
+		tauntIndex ++;
+		System.out.println(taunts[tauntIndex]);
 	}
 	public String getName() {
 		return "Trishula";
