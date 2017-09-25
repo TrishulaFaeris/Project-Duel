@@ -8,8 +8,8 @@ public class CharacterA implements Dueler{
 	public CharacterA() {
 	}
 	public void taunt() {
-		tauntIndex ++;
 		System.out.println(taunts[tauntIndex]);
+		tauntIndex ++;
 	}
 	public String getName() {
 		return "Trishula";
