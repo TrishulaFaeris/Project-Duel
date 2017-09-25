@@ -12,7 +12,17 @@ public class CharacterB implements Dueler {
 	}
 	public void taunt()
 	{
+		if(Math.random() < 0.34) {
 		System.out.println("We don't need ya here, get the fudge inside!");
+		}
+		else {
+			if(Math.random() < 0.67) {
+				System.out.println("Why don't ya go suck on your mama's chest.");
+			}
+			else {
+				System.out.println("Omae wa mou shindeiru.");
+			}
+		}
 	}
 	public void setStartingHP(int hp) {
 		this.hp = hp;
@@ -32,6 +42,7 @@ public class CharacterB implements Dueler {
 	}
 	public int getAction(Object caller) {
 		boolean d2Loaded = false;
+		
 		if(Math.random() <0.25){
 			return 3;
 		}
