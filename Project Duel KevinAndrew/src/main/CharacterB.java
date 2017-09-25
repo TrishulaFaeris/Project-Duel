@@ -5,7 +5,6 @@ public class CharacterB implements Dueler {
 	private boolean d2Load;
 	public CharacterB()
 	{
-		
 	}
 	public String getName()
 	{
@@ -42,9 +41,10 @@ public class CharacterB implements Dueler {
 		
 	}
 	public int getAction(Object caller) {
-		if(caller instanceof Duel){
+		if(caller instanceof Dueler){
 			return 3;
 		}
+		else {
 			if(Math.random()<0.75) {
 				return 2;
 			}
@@ -60,6 +60,7 @@ public class CharacterB implements Dueler {
 			}
 			
 		}
+	}
 	public void hit(Object caller) {
 		if(caller instanceof Duel) {
 		 this.hp = this.hp - 10;
