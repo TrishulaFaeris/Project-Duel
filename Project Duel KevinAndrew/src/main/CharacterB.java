@@ -2,6 +2,7 @@ package main;
 
 public class CharacterB implements Dueler {
 	private int hp;
+	private boolean d2Load;
 	public CharacterB()
 	{
 		
@@ -41,28 +42,24 @@ public class CharacterB implements Dueler {
 		
 	}
 	public int getAction(Object caller) {
-		boolean d2Loaded = false;
-		
-		if(Math.random() <0.25){
+		if(caller instanceof Duel){
 			return 3;
 		}
-		else {
 			if(Math.random()<0.75) {
 				return 2;
 			}
 			else {
-				if(d2Loaded == false) {
-					d2Loaded = true;
+				if(d2Load == false) {
+					d2Load = true;
 					return 0;
 				}
 				else {
-					d2Loaded = false;
+					d2Load = false;
 					return 1;
 				}
 			}
 			
 		}
-	}
 	public void hit(Object caller) {
 		if(caller instanceof Duel) {
 		 this.hp = this.hp - 10;
